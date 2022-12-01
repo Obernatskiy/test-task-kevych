@@ -1,7 +1,7 @@
 const fs = require('fs/promises');
 const path = require('path');
 
-const pathToFile = path.join(process.cwd(), 'dataBase', 'trains.json');
+const pathToFile = path.join(process.cwd(), 'dataBase');
 
 const reader = async () => {
     try {

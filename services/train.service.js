@@ -11,5 +11,8 @@ module.exports = {
 
     deleteTrainById(trainId) {
         return Train.deleteOne({ _id: trainId });
+    },
+    findLikeByName(filter) {
+        return Train.find({ name: {$regex: '.*' + filter + '.*' }});
     }
 }

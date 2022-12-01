@@ -18,5 +18,5 @@ app.use('/trains', userRouter);
 
 app.listen(5000, () => {
     console.log('App listen 5000');
-    mongoose.connect(MONGO_URL);
+    mongoose.connect('mongodb://localhost:27017/test-task');
 });

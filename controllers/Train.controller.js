@@ -8,6 +8,13 @@ module.exports = {
         res.json(TrainsFromService);
     },
 
+    filterTrains: async(req, res) => {
+        const filter = req.query.filter;
+        const filteredTrains = await trainService.findLikeByName(filter);
+
+        res.json(filteredTrains);
+    },
+
     createTrain: async (req, res) => {
         const train = await trainService.createTrain(req.body);
 
